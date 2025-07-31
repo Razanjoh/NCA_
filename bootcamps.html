@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المعسكرات - الأكاديمية الوطنية للأمن السيبراني</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Tajawal', sans-serif; }
+    .active-tab { background-color: #1d4ed8; color: white; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- ✅ الهيدر -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <img src="https://media.licdn.com/dms/image/v2/D4D22AQEXwQVS_jNQBg/feedshare-shrink_800/feedshare-shrink_800/0/1691426097824?e=2147483647&v=beta&t=Dd9UM5BqhiORYDJsIZPnU8DafCA8GtuHT9zxzvCRgj8" alt="شعار الأكاديمية" class="h-20 w-25 object-contain">
+    <nav class="space-x-4 space-x-reverse text-sm">
+            <a href="index.html" class="text-gray-600 hover:text-blue-700">الرئيسية</a>
+            <a href="about.html" class="text-gray-600 hover:text-blue-700">عن الأكاديمية</a>
+<a href="bootcamps.html" class="text-gray-600 hover:text-blue-700">المعسكرات</a>
+      <a href="news.html" class="text-gray-600 hover:text-blue-700">الأخبار والفعاليات</a>
+      <a href="partners.html" class="text-gray-600 hover:text-blue-700">شركاؤنا</a>
+    <a href="accreditations.html" class="text-gray-600 hover:text-blue-700">الاعتمادات</a>
+<a href="login.html"class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">تسجيل الدخول</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ✅ الفلاتر -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-blue-900 mb-10 text-center">المعسكرات والبرامج التدريبية</h2>
+
+    <!-- Tabs المجالات -->
+    <div class="flex justify-center flex-wrap gap-4 mb-8">
+      <button onclick="switchTab('cyber')" class="tab-btn px-6 py-2 border border-blue-600 rounded text-blue-600 hover:bg-blue-600 hover:text-white transition active-tab">الدفاع السيبراني</button>
+      <button onclick="switchTab('data')" class="tab-btn px-6 py-2 border border-blue-600 rounded text-blue-600 hover:bg-blue-600 hover:text-white transition">تحليل البيانات</button>
+      <button onclick="switchTab('ai')" class="tab-btn px-6 py-2 border border-blue-600 rounded text-blue-600 hover:bg-blue-600 hover:text-white transition">الذكاء الاصطناعي</button>
+    </div>
+
+    <!-- فلاتر الفئة والنوع -->
+    <div class="flex justify-center gap-6 mb-10 flex-wrap">
+      <select id="audienceFilter" class="border px-4 py-2 rounded focus:outline-none focus:ring">
+        <option value="all">كل الفئات</option>
+        <option value="كبار">كبار</option>
+        <option value="ناشئون">ناشئون</option>
+      </select>
+      <select id="typeFilter" class="border px-4 py-2 rounded focus:outline-none focus:ring">
+        <option value="all">كل الأنواع</option>
+        <option value="معسكر">معسكر</option>
+        <option value="برنامج">برنامج</option>
+        <option value="لقاء">لقاء</option>
+      </select>
+    </div>
+
+    <!-- المحتوى حسب المجال -->
+<div id="cyber" class="program-grid grid md:grid-cols-3 gap-8">
+  <!-- بطاقة 1 -->
+  <div class="card" data-type="معسكر" data-audience="كبار">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">معسكر الأمن السيبراني الشامل</h3>
+    <p class="text-sm text-gray-600 mb-3">المدة: 8 أسابيع - الرياض / عن بُعد</p>
+    <span class="text-xs text-gray-500">كبار • معسكر</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+
+  <!-- بطاقة 2 -->
+  <div class="card" data-type="برنامج" data-audience="ناشئون">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">برنامج الأمن السيبراني للناشئين</h3>
+    <p class="text-sm text-gray-600 mb-3">3 أسابيع - حضوري</p>
+    <span class="text-xs text-gray-500">ناشئون • برنامج</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+
+  <!-- بطاقة 3 -->
+  <div class="card" data-type="برنامج" data-audience="كبار">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">برنامج الاستجابة للحوادث السيبرانية</h3>
+    <p class="text-sm text-gray-600 mb-3">4 أسابيع - أونلاين</p>
+    <span class="text-xs text-gray-500">كبار • برنامج</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+</div>
+
+<!-- محتوى data -->
+<div id="data" class="program-grid hidden grid md:grid-cols-3 gap-8">
+  <!-- بطاقة 1 -->
+  <div class="card" data-type="برنامج" data-audience="كبار">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">برنامج تحليل البيانات السيبرانية</h3>
+    <p class="text-sm text-gray-600 mb-3">5 أسابيع - عن بُعد</p>
+    <span class="text-xs text-gray-500">كبار • برنامج</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+
+  <!-- بطاقة 2 -->
+  <div class="card" data-type="معسكر" data-audience="ناشئون">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">معسكر تحليل البيانات للناشئين</h3>
+    <p class="text-sm text-gray-600 mb-3">6 أسابيع - الرياض</p>
+    <span class="text-xs text-gray-500">ناشئون • معسكر</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+
+  <!-- بطاقة 3 -->
+  <div class="card" data-type="معسكر" data-audience="كبار">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">معسكر البيانات الضخمة</h3>
+    <p class="text-sm text-gray-600 mb-3">4 أسابيع - أونلاين</p>
+    <span class="text-xs text-gray-500">كبار • معسكر</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+</div>
+
+<!-- محتوى ai -->
+<div id="ai" class="program-grid hidden grid md:grid-cols-3 gap-8">
+  <!-- بطاقة 1 -->
+  <div class="card" data-type="لقاء" data-audience="كبار">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">لقاء الذكاء الاصطناعي والسيبراني</h3>
+    <p class="text-sm text-gray-600 mb-3">لقاء يومي - حضور مباشر</p>
+    <span class="text-xs text-gray-500">كبار • لقاء</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+
+  <!-- بطاقة 2 -->
+  <div class="card" data-type="برنامج" data-audience="ناشئون">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">برنامج الذكاء الاصطناعي للناشئين</h3>
+    <p class="text-sm text-gray-600 mb-3">2 أسبوعين - عن بُعد</p>
+    <span class="text-xs text-gray-500">ناشئون • برنامج</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+
+  <!-- بطاقة 3 -->
+  <div class="card" data-type="معسكر" data-audience="كبار">
+    <h3 class="text-lg font-bold text-blue-800 mb-2">معسكر تطبيقات الذكاء الاصطناعي</h3>
+    <p class="text-sm text-gray-600 mb-3">6 أسابيع - حضوري</p>
+    <span class="text-xs text-gray-500">كبار • معسكر</span>
+<a href="program-details.html" class="block mt-4 bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800">سجّل الآن</a>
+  </div>
+</div>
+
+</section>
+
+<!--  سكربت التبويبات والفلاتر -->
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const sections = ['cyber', 'data', 'ai'];
+
+  function switchTab(tabId) {
+    sections.forEach(id => {
+      document.getElementById(id).classList.add('hidden');
+    });
+    document.getElementById(tabId).classList.remove('hidden');
+
+    tabs.forEach(btn => btn.classList.remove('active-tab'));
+    const clicked = [...tabs].find(btn => btn.textContent.includes(document.querySelector(`#${tabId} h3`)?.textContent.split(' ')[0]));
+    if (clicked) clicked.classList.add('active-tab');
+  }
+
+  document.getElementById('audienceFilter').addEventListener('change', applyFilters);
+  document.getElementById('typeFilter').addEventListener('change', applyFilters);
+
+  function applyFilters() {
+    const audience = document.getElementById('audienceFilter').value;
+    const type = document.getElementById('typeFilter').value;
+
+    document.querySelectorAll('.program-grid').forEach(grid => {
+      grid.querySelectorAll('.card').forEach(card => {
+        const matchAudience = (audience === 'all' || card.dataset.audience === audience);
+        const matchType = (type === 'all' || card.dataset.type === type);
+        card.style.display = (matchAudience && matchType) ? 'block' : 'none';
+      });
+    });
+  }
+
+  switchTab('cyber');
+</script>
+
+<!-- ✅ ستايل البطاقة -->
+<style>
+  .card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+  }
+</style>
+
+</body>
+</html>

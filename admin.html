@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة تحكم المشرف</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Tajawal', sans-serif; background-color: #f9fafb; }
+  </style>
+</head>
+<body class="flex">
+
+<aside class="w-64 bg-blue-900 text-white h-screen sticky top-0 flex flex-col">
+  <div class="p-6 text-xl font-bold border-b border-blue-700">لوحة المشرف</div>
+  <nav class="flex-1 p-4 space-y-3 text-sm">
+    <a href="admin.html" class="block hover:bg-blue-800 p-2 rounded"> نظرة عامة</a>
+    <a href="users.html" class="block hover:bg-blue-800 p-2 rounded"> إدارة المستخدمين</a>
+    <a href="programs.html" class="block hover:bg-blue-800 p-2 rounded"> البرامج والمعسكرات</a>
+    <a href="messages.html" class="block hover:bg-blue-800 p-2 rounded"> الرسائل والاستفسارات</a>
+    <a href="statistics.html" class="block hover:bg-blue-800 p-2 rounded"> الإحصائيات</a>
+    <a href="index.html" class="block text-red-300 hover:text-red-100 p-2 rounded"> العودة للصفحة الرئيسية</a>
+  </nav>
+</aside>
+
+  <!-- ✅ المحتوى الرئيسي -->
+  <main class="flex-1 p-10 space-y-8">
+    <h1 class="text-2xl font-bold text-blue-800">مرحبًا !</h1>
+
+    <!-- ✅ نظرة عامة -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h2 class="text-lg font-semibold text-blue-700 mb-2">عدد المسجلين</h2>
+        <p class="text-3xl font-bold text-blue-800">245</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h2 class="text-lg font-semibold text-blue-700 mb-2">عدد البرامج الفعّالة</h2>
+        <p class="text-3xl font-bold text-blue-800">8</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h2 class="text-lg font-semibold text-blue-700 mb-2">طلبات الدعم</h2>
+        <p class="text-3xl font-bold text-blue-800">13</p>
+      </div>
+    </div>
+      <div class="bg-white p-6 rounded shadow text-center">
+    <h2 class="text-lg font-semibold text-blue-700 mb-2">بدون تسجيل</h2>
+    <p class="text-3xl font-bold text-red-600">2</p>
+  </div>
+
+
+    <!-- جدول إدارة -->
+    <div>
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">📋 آخر المسجلين</h2>
+      <div class="overflow-x-auto bg-white rounded shadow">
+        <table class="w-full text-sm text-right">
+          <thead class="bg-blue-50 text-blue-800">
+            <tr>
+              <th class="p-3">الاسم</th>
+              <th class="p-3">البرنامج</th>
+              <th class="p-3">الحالة</th>
+              <th class="p-3">الإجراءات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b hover:bg-gray-50">
+              <td class="p-3">أحمد العتيبي</td>
+              <td class="p-3">معسكر الأمن السيبراني</td>
+              <td class="p-3 text-green-600">مقبول</td>
+              <td class="p-3"><button class="text-blue-600 hover:underline">عرض</button></td>
+            </tr>
+            <tr class="border-b hover:bg-gray-50">
+              <td class="p-3">سارة المطيري</td>
+              <td class="p-3">تحليل البيانات</td>
+              <td class="p-3 text-yellow-600">قيد المراجعة</td>
+              <td class="p-3"><button class="text-blue-600 hover:underline">عرض</button></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="p-3">خالد الحربي</td>
+              <td class="p-3">لقاء الذكاء الاصطناعي</td>
+              <td class="p-3 text-red-600">مرفوض</td>
+              <td class="p-3"><button class="text-blue-600 hover:underline">عرض</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!--  تنبيه إداري -->
+    <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+      <p class="text-sm text-red-700">⚠️ تذكير: هناك 3 برامج لم يتم تحديثها منذ أسبوع.</p>
+    </div>
+  </main>
+
+</body>
+</html>

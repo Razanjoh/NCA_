@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الأكاديمية الوطنية للأمن السيبراني</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+  <style>
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #fff;
+  color: #1e293b;
+}
+  </style>
+</head>
+<body>
+
+<!-- الهيدر-->
+<header class="bg-white/90 backdrop-blur shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="https://media.licdn.com/dms/image/v2/D4D22AQEXwQVS_jNQBg/feedshare-shrink_800/feedshare-shrink_800/0/1691426097824?e=2147483647&v=beta&t=Dd9UM5BqhiORYDJsIZPnU8DafCA8GtuHT9zxzvCRgj8"
+           alt="شعار الأكاديمية"
+           class="h-14 w-auto"/>
+      <span class="text-lg font-bold text-blue-800">الأكاديمية الوطنية للأمن السيبراني</span>
+    </div>
+    
+    <nav class="flex items-center gap-6 text-sm">
+            <a href="index.html" class="text-gray-600 hover:text-blue-700">الرئيسية</a>
+            <a href="about.html" class="text-gray-600 hover:text-blue-700">عن الأكاديمية</a>
+<a href="bootcamps.html" class="text-gray-600 hover:text-blue-700">المعسكرات</a>
+      <a href="news.html" class="text-gray-600 hover:text-blue-700">الأخبار والفعاليات</a>
+      <a href="partners.html" class="text-gray-600 hover:text-blue-700">شركاؤنا</a>
+    <a href="accreditations.html" class="text-gray-600 hover:text-blue-700">الاعتمادات</a>
+<a href="login.html"class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">تسجيل الدخول</a>
+<div class="relative">
+  <button onclick="toggleMenu()" class="ml-3 text-gray-600 hover:text-blue-700 focus:outline-none">
+    <!-- أيقونة gear -->
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 15.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7zm0-12v2m0 14v2m7.07-10.07l-1.41 1.41m-9.9 9.9l-1.41 1.41m0-12.72l1.41 1.41m12.72 0l1.41-1.41m-2.12 8.48h2m-14 0h2"></path>
+    </svg>
+  </button>
+  <div id="settingsMenu" class="absolute left-0 mt-2 bg-white border rounded shadow-lg p-2 w-40 text-sm hidden z-50">
+    <a href="dashboard.html" class="block px-3 py-1 text-blue-700 hover:bg-blue-50">لوحة الطالب</a>
+    <a href="admin.html" class="block px-3 py-1 text-blue-700 hover:bg-blue-50">لوحة المشرف</a>
+  </div>
+</div>
+
+<!-- سكربت بسيط للتبديل -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('settingsMenu');
+    menu.classList.toggle('hidden');
+  }
+
+  // إغلاق القائمة إذا ضغطت خارجها
+  window.addEventListener('click', function(e) {
+    const menu = document.getElementById('settingsMenu');
+    const button = document.querySelector('button[onclick="toggleMenu()"]');
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+</script>
+
+    </nav>
+  </div>
+</header>
+<section class="relative bg-white py-24 overflow-hidden">
+  <!-- شبكة العنكبوتية الخلفية -->
+  <div class="absolute inset-0 bg-grid-pattern opacity-40 z-0"></div>
+
+  <div class="relative w-full mx-auto max-w-6xl px-6 z-10" id="bannerSlider">
+    <!-- الشرائح -->
+    <div class="slides relative h-56 md:h-64 lg:h-72 overflow-hidden rounded-xl">
+      <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+        <div class="h-full bg-gradient-to-l from-blue-900 to-blue-700 text-white flex flex-col justify-center px-6">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">نُعد نخبة الوطن لحماية الفضاء السيبراني</h1>
+          <p class="text-sm md:text-lg text-blue-100">برامج احترافية بإشراف نخبة من الخبراء المعتمدين</p>
+        </div>
+      </div>
+      <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+        <div class="h-full bg-gradient-to-l from-indigo-800 to-purple-600 text-white flex flex-col justify-center px-6">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">سجّل الآن في معسكرات صيف 2025</h1>
+          <p class="text-sm md:text-lg text-blue-100">مقاعد محدودة – فرص مهنية حقيقية</p>
+        </div>
+      </div>
+      <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+        <div class="h-full bg-gradient-to-l from-gray-800 to-blue-800 text-white flex flex-col justify-center px-6">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">معسكرات افتراضية وواقعية</h1>
+          <p class="text-sm md:text-lg text-blue-100">تدريب تطبيقي + شهادات معتمدة</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- النقاط -->
+    <div class="flex justify-center mt-6 gap-2">
+      <button class="dot w-3 h-3 rounded-full bg-blue-300 hover:bg-blue-500 transition" onclick="goToSlide(0)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-blue-300 hover:bg-blue-500 transition" onclick="goToSlide(1)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-blue-300 hover:bg-blue-500 transition" onclick="goToSlide(2)"></button>
+    </div>
+  </div>
+
+  <!-- شبكة العنكبوتية كـ CSS -->
+  <style>
+    .bg-grid-pattern {
+      background-image: 
+        linear-gradient(to right, rgba(120, 120, 120, 0.111) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(120, 120, 120, 0.038) 1px, transparent 1px);
+      background-size: 15px 15px;
+    }
+  </style>
+
+  <script>
+    const slides = document.querySelectorAll("#bannerSlider .slide");
+    const dots = document.querySelectorAll("#bannerSlider .dot");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-blue-600', i === index);
+      });
+      currentSlide = index;
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+    }
+
+    function autoSlide() {
+      let nextSlide = (currentSlide + 1) % slides.length;
+      showSlide(nextSlide);
+    }
+
+    setInterval(autoSlide, 6000);
+    showSlide(0);
+  </script>
+</section>
+
+<!-- سكشن الأرقام -->
+<section id="stats" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-800 mb-12">أرقام نفخر بها</h2>
+
+    <div class="grid md:grid-cols-4 gap-10">
+      
+      <!-- بطاقة إحصائية -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300 transform hover:scale-105">
+        <p class="text-3xl font-bold text-blue-800 mb-2">+20,000</p>
+        <p class="text-gray-600 text-sm">ساعة تدريبية في الحماية السيبرانية</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300 transform hover:scale-105">
+        <p class="text-3xl font-bold text-blue-800 mb-2">+1,500</p>
+        <p class="text-gray-600 text-sm">متخصص تم تأهيله في الدفاع السيبراني</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300 transform hover:scale-105">
+        <p class="text-3xl font-bold text-blue-800 mb-2">+200</p>
+        <p class="text-gray-600 text-sm">سيناريو هجوم محاكى بتقنيات حديثة</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300 transform hover:scale-105">
+        <p class="text-3xl font-bold text-blue-800 mb-2">95%</p>
+        <p class="text-gray-600 text-sm">نسبة رضا الخريجين عن البرامج التدريبية</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🔷 سكشن المعسكرات -->
+ <section id="bootcamps" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-blue-800 mb-12 text-center">المعسكرات المتاحة</h2>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <!-- معسكر 1 -->
+        <div class="swiper-slide bg-gray-50 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">معسكر الأمن السيبراني الشامل</h3>
+          <ul class="text-sm text-gray-600 mb-4 space-y-1">
+            <li>المدة: 8 أسابيع</li>
+            <li>الموقع: الرياض / عن بُعد</li>
+            <li>المستوى: مبتدئ</li>
+          </ul>
+          <a href="register.html" class="block bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800 transition">سجّل الآن</a>
+        </div>
+
+        <!-- معسكر 2 -->
+        <div class="swiper-slide bg-gray-50 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">معسكر اختبار الاختراق</h3>
+          <ul class="text-sm text-gray-600 mb-4 space-y-1">
+            <li>المدة: 6 أسابيع</li>
+            <li>الموقع: عن بُعد</li>
+            <li>المستوى: متقدم</li>
+          </ul>
+          <a href="register.html" class="block bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800 transition">سجّل الآن</a>
+        </div>
+
+        <!-- معسكر 3 -->
+        <div class="swiper-slide bg-gray-50 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">معسكر تحليل البيانات السيبرانية</h3>
+          <ul class="text-sm text-gray-600 mb-4 space-y-1">
+            <li>المدة: 5 أسابيع</li>
+            <li>الموقع: الرياض</li>
+            <li>المستوى: متوسط</li>
+          </ul>
+          <a href="register.html" class="block bg-blue-700 text-white py-2 rounded text-center hover:bg-blue-800 transition">سجّل الآن</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- قسم الأخبار والفعاليات -->
+<section id="news-events" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-3xl font-bold text-blue-800">الأخبار والفعاليات</h2>
+      <a href="news.html" class="text-blue-600 hover:underline">عرض المزيد</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- بطاقة الخبر 1 -->
+      <article class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition p-6">
+        <img src="news1.jpg" alt="خبر 1" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">إطلاق معسكر السيبراني الوطني</h3>
+        <p class="text-gray-600 text-sm mb-2">14 يوليو 2025</p>
+        <p class="text-gray-700 text-sm">الأكاديمية تطلق مبادرة تطوير 3,000 مطور بالتعاون مع Google Cloud.</p>
+      </article>
+
+      <!-- بطاقة الخبر 2 -->
+      <article class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition p-6">
+        <img src="news2.jpg" alt="خبر 2" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">شراكة مع سدايا ومعرض ITEX 2025</h3>
+        <p class="text-gray-600 text-sm mb-2">مايو 2025</p>
+        <p class="text-gray-700 text-sm">سدايا تحتفي بخريجي الأكاديمية بحصولهم على منح في ITEX 2025.</p>
+      </article>
+
+      <!-- بطاقة الخبر 3 -->
+      <article class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition p-6">
+        <img src="news3.jpg" alt="خبر 3" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">فعالية بلاك هات الشرق الأوسط وأفريقيا 2024</h3>
+        <p class="text-gray-600 text-sm mb-2">نوفمبر 2024</p>
+        <p class="text-gray-700 text-sm">اختتام فعاليات بلاك هات الأكبر في الرياض بتنظيم الأكاديمية.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!--  سكشن قصص النجاح -->
+<section id="success-stories" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-800 mb-12">قصص نجاح نفتخر بها</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 text-right">
+
+      <!-- بطاقة خريج -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition border">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="bg-blue-100 rounded-full w-14 h-14 flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="خريج" class="w-10 h-10" />
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-blue-700">سارة المطيري</h4>
+            <p class="text-sm text-gray-500">محللة أمن معلومات</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          خريجة برنامج SOC، وتم تعيينها ضمن فريق الأمن السيبراني في وزارة التعليم بعد اجتياز تقييمات أكاديمية متقدمة.
+        </p>
+      </div>
+
+      <!-- بطاقة خريج -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition border">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="bg-blue-100 rounded-full w-14 h-14 flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="خريج" class="w-10 h-10" />
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-blue-700">أحمد الناصر</h4>
+            <p class="text-sm text-gray-500">مهندس اختبار اختراق</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          التحق بمعسكر اختبار الاختراق، وحصل على شهادة OSCP وانضم إلى شركة ناشئة متخصصة في الهجمات السيبرانية الأخلاقية.
+        </p>
+      </div>
+
+      <!-- بطاقة خريجة -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition border">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="bg-blue-100 rounded-full w-14 h-14 flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="خريجة" class="w-10 h-10" />
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-blue-700">ريم العبدالله</h4>
+            <p class="text-sm text-gray-500">أخصائية أمن سحابي</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          بعد تخرجها من برنامج الأمن السحابي، حصلت على منحة للدراسات العليا في تخصص البنى التحتية الرقمية.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- faq-->
+</section>
+<section class="bg-white py-16 px-4 md:px-0">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold text-blue-800">الأسئلة الشائعة</h2>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-6">
+    <!-- سؤال 1 -->
+    <details class="bg-gray-50 p-4 rounded-lg shadow-sm border cursor-pointer">
+      <summary class="font-semibold text-blue-700 text-lg">ما هي شروط التسجيل؟</summary>
+      <p class="text-gray-700 mt-2 leading-relaxed">
+        التسجيل مفتوح لجميع السعوديين والمقيمين فوق 18 سنة، ولا يشترط وجود خلفية تقنية لبعض البرامج.
+      </p>
+    </details>
+
+    <!-- سؤال 2 -->
+    <details class="bg-gray-50 p-4 rounded-lg shadow-sm border cursor-pointer">
+      <summary class="font-semibold text-blue-700 text-lg">هل تحتاج لدورات سابقة؟</summary>
+      <p class="text-gray-700 mt-2 leading-relaxed">
+        لا، بعض البرامج لا تشترط خبرة سابقة. وهناك برامج مخصصة للمبتدئين تمامًا.
+      </p>
+    </details>
+  </div>
+
+  <!-- 🔗 زر عرض المزيد -->
+  <div class="mt-10 text-center">
+    <a href="faq.html" class="text-blue-600 hover:underline text-sm md:text-base font-semibold">
+      عرض جميع الأسئلة →
+    </a>
+  </div>
+</section>
+<!-- سكشن النشرة البريدية -->
+<section id="newsletter" class="bg-blue-50 py-16">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-800 mb-4">اشترك في نشرتنا البريدية</h2>
+    <p class="text-gray-600 mb-6">كن أول من يعرف عن المعسكرات، الفعاليات، والفرص التدريبية الجديدة.</p>
+    
+    <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4" onsubmit="handleNewsletter(event)">
+      <input
+        type="email"
+        id="newsletterEmail"
+        required
+        placeholder="أدخل بريدك الإلكتروني"
+        class="flex-1 py-3 px-4 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      />
+      <button
+        type="submit"
+        class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+      >
+        اشترك الآن
+      </button>
+    </form>
+
+    <!-- إشعار نجاح الاشتراك -->
+    <div id="newsletterSuccess" class="text-green-600 font-semibold mt-4 hidden">
+       تم الاشتراك بنجاح! شكرًا لانضمامك 
+    </div>
+  </div>
+</section>
+
+<!--  سكشن الفوتر -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+  <div class="container mx-auto px-4 grid md:grid-cols-3 gap-10">
+
+    <!-- 1. روابط سريعة -->
+    <div>
+      <h4 class="text-white text-lg font-semibold mb-4">روابط سريعة</h4>
+      <ul class="space-y-2 text-sm leading-relaxed">
+        <li><a href="index.html" class="hover:text-white">الرئيسية</a></li>
+        <li><a href="about.html" class="hover:text-white">عن الأكاديمية</a></li>
+        <li><a href="bootcamps.html" class="hover:text-white">المعسكرات</a></li>
+        <li><a href="partners.html" class="hover:text-white">الشركاء</a></li>
+        <li><a href="accreditations.html" class="hover:text-white">الاعتمادات</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- 2. معلومات التواصل -->
+ <div>
+      <h4 class="text-white text-lg font-semibold mb-4">تواصل معنا</h4>
+      <p class="text-sm">الهيئة الوطنية للأمن السيبراني</p>
+      <p class="text-sm mt-2">الرياض، المملكة العربية السعودية</p>
+      <p class="text-sm mt-1">contact@cyberacademy.sa</p>
+      <p class="text-sm mt-1"> 9200 12345</p>
+    </div>
+
+    <!-- 3. تابعنا -->
+<div>
+  <h4 class="text-white text-lg font-semibold mb-4">تابعنا على المنصات</h4>
+  <div class="flex items-center gap-4 mt-2">
+
+    <a href="https://x.com/NCA_KSA" target="_blank" aria-label="X"
+       class="text-gray-300 hover:text-white transition">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+        <path d="M22.25 0 13.44 10.19 24 24h-9.25l-7.48-9.64L0 24h9.25l9.95-12.83L2 0z"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://ar.linkedin.com/company/national-cybersecurity-authority" target="_blank" aria-label="LinkedIn"
+       class="text-gray-300 hover:text-white transition">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+        <path d="M4.98 3.5C4.98 2.12 6.1 1 7.48 1s2.5 1.12 2.5 2.5S8.86 6 7.48 6 4.98 4.88 4.98 3.5zM2 8.5h4.9v13H2zm7.75 0H15v1.73h.09c.59-1.12 2.03-2.3 4.16-2.3 4.45 0 5.27 2.93 5.27 6.74V21.5h-5v-5.93c0-1.41-.03-3.22-1.97-3.22-1.98 0-2.28 1.55-2.28 3.11V21.5h-5v-13z"/>
+      </svg>
+    </a>
+
+  </div>
+</div>
+
+  </div>
+
+  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+    &copy; 2025 الأكاديمية الوطنية للأمن السيبراني – جميع الحقوق محفوظة
+  </div>
+</footer>
+
+<!-- 🔷 سكربت البوت -->
+<script>
+  const botResponses = {
+    "كيف اسجل": "تقدر تسجل من خلال زر 'سجّل الآن' في الصفحة الرئيسية.",
+    "متى تبدأ المعسكرات": "تبدأ المعسكرات في 15 أغسطس 2025.",
+    "كيف أطلب شهادة": "ادخل على لوحة الطالب واختر 'مشاهدة الشهادة'.",
+    "هل التدريب حضوري": "بعض المعسكرات حضوري وبعضها عن بُعد، مكتوب في وصف كل برنامج.",
+    "هل في شهادة": "أكيد! تحصل على شهادة معتمدة بعد اجتياز التدريب.",
+    "طريقة التقديم": "اضغط على زر 'سجّل الآن' وعبِّ البيانات المطلوبة.",
+  };
+
+  function toggleBot() {
+    const bot = document.getElementById("botBox");
+    bot.classList.toggle("hidden");
+  }
+
+  function sendToBot(e) {
+    e.preventDefault();
+    const input = document.getElementById("botInput");
+    const msg = input.value.trim();
+    const container = document.getElementById("botMessages");
+
+    if (msg) {
+      container.innerHTML += `<div class="text-right text-blue-800 mb-1">🧑‍🎓 ${msg}</div>`;
+      input.value = "";
+
+      let reply = " عذرًا، لم أفهم سؤالك بعد.";
+
+      for (let key in botResponses) {
+        if (msg.includes(key)) {
+          reply = "🤖 " + botResponses[key];
+          break;
+        }
+      }
+
+      setTimeout(() => {
+        container.innerHTML += `<div class="text-left text-gray-600 mb-2">${reply}</div>`;
+        container.scrollTop = container.scrollHeight;
+      }, 400);
+    }
+  }
+</script>
+
+<!-- 🔷 هيكل البوت -->
+<button onclick="toggleBot()" class="fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg text-xl transition">
+  🤖
+</button>
+
+<div id="botBox" class="fixed bottom-24 left-6 bg-white shadow-xl rounded-lg w-72 p-4 text-sm text-gray-700 hidden z-50">
+  <div class="font-semibold text-blue-600 mb-2">مساعد الأكاديمية:</div>
+  <div id="botMessages" class="h-32 overflow-y-auto text-sm mb-2 border border-gray-200 p-2 rounded bg-gray-50"></div>
+  <form onsubmit="sendToBot(event)" class="flex gap-2">
+    <input id="botInput" type="text" placeholder="اسألني عن البرامج أو التسجيل..." class="flex-1 border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    <button type="submit" class="text-blue-600 font-bold">إرسال</button>
+  </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    spaceBetween: 30,
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
